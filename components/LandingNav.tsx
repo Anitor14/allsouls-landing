@@ -1,16 +1,17 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Link from "next/link";
 import Image from "next/image";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const NAV_LINKS = [
-  { label: "About", href: "#about" },
-  { label: "Visit", href: "#visit" },
-  { label: "Clergy", href: "#clergy" },
-  { label: "Gallery", href: "#gallery" },
-  { label: "The App", href: "#app" },
+  { label: "About", href: "/#about" },
+  { label: "Visit", href: "/#visit" },
+  { label: "Clergy", href: "/#clergy" },
+  { label: "Gallery", href: "/#gallery" },
+  { label: "The App", href: "/#app" },
 ];
 
 const LandingNav = () => {
@@ -34,7 +35,7 @@ const LandingNav = () => {
         )}
       >
         <div className="flex items-center justify-between gap-4 px-4 py-2.5">
-          <a href="#top" aria-label="All Souls' Church, Lekki home">
+          <Link href="/" aria-label="All Souls' Church, Lekki home">
             <Image
               src="/images/church-logo.png"
               alt=""
@@ -43,7 +44,7 @@ const LandingNav = () => {
               className="h-7 w-auto sm:h-9"
               preload
             />
-          </a>
+          </Link>
 
           <div className="hidden items-center gap-8 md:flex">
             {NAV_LINKS.map((link) => (
