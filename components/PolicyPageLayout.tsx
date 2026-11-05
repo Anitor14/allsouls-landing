@@ -74,3 +74,4 @@ const PolicyPageLayout: React.FC<PolicyPageLayoutProps> = ({
 };
 
 export default PolicyPageLayout;
+
